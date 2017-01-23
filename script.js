@@ -113,9 +113,9 @@ function closeButton() {
         player1_name = "DJ " + $("#player1_name").val();
         player2_name = "DJ " + $("#player2_name").val();
         loadAudioFx();
-        $("#DJ1").append(player1_name);
-        $(".Player_turn").text(player1_name + "'s turn!");
-        $("#DJ2").append(player2_name);
+        // $("#DJ1").append(player1_name);
+        $(".Player_turn").text('A.K.A. ' + player1_name);
+        // $("#DJ2").append(player2_name);
         $('#main').show();
         $(".front_page").slideToggle(1500);
         $('.gamesquare').slideToggle(2000);
@@ -176,12 +176,12 @@ function closeButton() {
             if (whos_turn == 'x') {
 
                 whos_turn = 'o';
-                $(".Player_turn").text(player2_name + "'s turn!");
+                $(".Player_turn").text('A.k.a. ' + player2_name);
                 $("#DJ1").css("box-shadow", "0 0 0 black");
                 $("#DJ2").css("box-shadow", "0 0 30px 5px white");
             } else if (whos_turn == 'o') {
                 whos_turn = 'x';
-                $(".Player_turn").text(player1_name + "'s turn!");
+                $(".Player_turn").text('A.k.a. '+ player1_name);
                 $("#DJ2").css("box-shadow", "0 0 0 black");
                 $("#DJ1").css("box-shadow", "0 0 30px 5px white");
             }
@@ -278,7 +278,7 @@ function position_tracker() {
         $(this).append(player1);
         $(this).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
         whos_turn = 'o';
-        $(".Player_turn").text(player2_name + "'s turn!");
+        $(".Player_turn").text('A.K.A. ' + player2_name);
         $("#DJ2").css("box-shadow", "0 0 30px 5px white");
         $('.cover_box').fadeIn(2000);
         if (!checkWin(row, column, randomWin, 'x')) {
@@ -293,7 +293,7 @@ function position_tracker() {
         $(this).append(player2);
         $(this).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
         whos_turn = 'x';
-        $(".Player_turn").text(player1_name + "'s turn!");
+        $(".Player_turn").text('A.K.A. ' + player1_name);
         $("#DJ1").css("box-shadow", "0 0 30px 5px white");
         $('.cover_box').fadeIn(2000);
         if (!checkWin(row, column, randomWin, 'o')) {
