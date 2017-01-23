@@ -8,3 +8,7 @@ Live: http://danlee.site/tictac-remix
 - Extra features: 
   - Correct answers add or remove a layer of music to the background
   - Audiovisualizer of music layers plays in the background 
+
+### Planned Features and Additions
+- Difficulty setting on trivia
+- Expanded trivia genres
