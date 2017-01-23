@@ -496,3 +496,10 @@ h1 {
     opacity:0.8;
     z-index: 4;
 }
+
+@media (max-width: 1250px) {
+    #canvas {
+        width: 75%;
+    }
+}
+
