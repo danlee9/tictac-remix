@@ -155,12 +155,19 @@ body {
     cursor: pointer;
 }
 
+::-webkit-input-placeholder {
+    color: orangered;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
 .input_name {
     padding: 0;
     padding-top: 115px;
     padding-left: 80px;
     color: orangered;
-    font-weight: bolder;
+    font-weight: bold;
     font-style: italic;
     font-size: 25px;
     position: absolute;
@@ -170,6 +177,7 @@ body {
     background-image: url(images/backstagepass.png);
     background-size: cover;
     border: none;
+    outline: none;
     transform: rotate(-20deg);
     transition-duration: 300ms;
 }
@@ -179,8 +187,8 @@ body {
     transform: rotate(5deg);
 }
 
-::-webkit-input-placeholder {
-    color: orangered;
+.input_name:focus {
+    box-shadow: 0 0 75px 20px white;
 }
 
 #player1_name {
