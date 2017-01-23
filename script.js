@@ -190,8 +190,8 @@ function closeButton() {
             $('.answer').hide();
             $('.next-question').show();
             $('.button_option').text('');
-            $('.question').append()
-            $('.question').append($nextQuestionButton);
+            // $('.question').append()
+            // $('.question').append($nextQuestionButton);
         }
     });
     $('#three').trigger('click');
@@ -421,6 +421,7 @@ function checkLowerDiagonal(i, j, numberOfSpots, XorO) {
 
 
 function ajaX() {
+    $('.spin').show();
     $.ajax({
         // url: 'http://www.opentdb.com/api.php?amount=1&category=9&difficulty=easy&type=multiple',
         // url: 'http://brianphan88.com/questions/multiple_api.php',
@@ -430,6 +431,7 @@ function ajaX() {
         // crossDomain: true,
         success: function (response) {
             // console.log("response: ", JSON.parse(response.substring(0, response.length - 1)));
+            $('.spin').hide();
             answered = false;
             $('.question_board').removeClass('answered');
             // console.log(JSON.parse(response));

@@ -344,7 +344,7 @@ h1 {
     font-weight: bolder;
     font-style: italic;
     top: 5%;
-    left: 12%;
+    left: 14%;
     position: absolute;
     text-align: center;
     height: 10vh;
@@ -366,6 +366,21 @@ h1 {
     border-radius: 25px;
     z-index: 6;
     transition: all 1s;
+}
+
+.glyphicon {
+    font-size: 30px;
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+    position: relative;
+    top: 6px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .question_board.answered {
