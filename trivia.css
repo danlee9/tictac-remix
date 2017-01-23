@@ -96,10 +96,13 @@ body {
     margin: 2px;
     background-color: rgba(50, 50, 50, .5);
     z-index:3;
+    /*transition: all 0.5s;*/
 }
 
 .gamesquare:hover {
     cursor: pointer;
+    background-color: rgba(240,128,128, .5);
+    animation: minor-flash 0.5s infinite;
 }
 
 .gamesquare3 {
@@ -271,6 +274,7 @@ body {
     right: 5%;
     top: 10%;
     z-index: 2;
+    padding: 10px;
 }
 
 #canvas {
@@ -496,6 +500,30 @@ h1 {
     opacity:0.8;
     z-index: 4;
 }
+
+.flash {
+    box-shadow: 0 0 50px 20px red;
+    background-color: rgba(240,128,128,.5);
+    animation: flash .5s infinite;
+}
+
+@keyframes flash {
+    0% {  box-shadow: 0 0 50px 20px red;}
+    50% {  box-shadow: 0 0 10px 10px red;}
+    100% {  box-shadow: 0 0 50px 20px red;}
+}
+
+@keyframes minor-flash {
+    0% {  box-shadow: 0 0 9px 9px red;}
+    50% {  box-shadow: 0 0 5px 5px red;}
+    100% {  box-shadow: 0 0 9px 9px red;}
+}
+
+/*@keyframes minor-flash {
+    0% {  background-color: rgba(240,128,128, .5);}
+    50% {  background-color: red;}
+    100% {  background-color: rgba(240,128,128, .5);}
+}*/
 
 @media (max-width: 1250px) {
     #canvas {

@@ -107,7 +107,8 @@ function loadAudioFx() {
 
 function closeButton() {
     $(".cover_box").hide();
-    $("#DJ1").css("box-shadow", "0 0 30px 5px white");
+    // old effect: css box shadow 0 0 30px 5px white
+    $("#DJ1").addClass('flash');
     $(".button").click(function () {
         ajaX();
         player1_name = "DJ " + $("#player1_name").val();
@@ -177,13 +178,15 @@ function closeButton() {
 
                 whos_turn = 'o';
                 $(".Player_turn").text('A.k.a. ' + player2_name);
-                $("#DJ1").css("box-shadow", "0 0 0 black");
-                $("#DJ2").css("box-shadow", "0 0 30px 5px white");
+                $("#DJ1").removeClass('flash');
+                // old effect: css box shadow 0 0 30px 5px white
+                $("#DJ2").addClass('flash');
             } else if (whos_turn == 'o') {
                 whos_turn = 'x';
                 $(".Player_turn").text('A.k.a. '+ player1_name);
-                $("#DJ2").css("box-shadow", "0 0 0 black");
-                $("#DJ1").css("box-shadow", "0 0 30px 5px white");
+                $("#DJ2").removeClass('flash');
+                // old effect: css box shadow 0 0 30px 5px white
+                $("#DJ1").addClass('flash');
             }
             $('.question').append(incorrect_answer);
             $('.show-answer').hide();
@@ -272,14 +275,15 @@ function position_tracker() {
 
     if (whos_turn == 'x') {
 
-        $("#DJ1").css("box-shadow", "0 0 0 black");
+        $("#DJ1").removeClass('flash');
         gameState[row][column] = 'x';
         var player1 = $('<div>').addClass('playerX');
         $(this).append(player1);
         $(this).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
         whos_turn = 'o';
         $(".Player_turn").text('A.K.A. ' + player2_name);
-        $("#DJ2").css("box-shadow", "0 0 30px 5px white");
+        // old effect: css box shadow 0 0 30px 5px white
+        $("#DJ2").addClass('flash');
         $('.cover_box').fadeIn(2000);
         if (!checkWin(row, column, randomWin, 'x')) {
             ajaX();
@@ -287,14 +291,15 @@ function position_tracker() {
     }
     else if (whos_turn == 'o') {
 
-        $("#DJ2").css("box-shadow", "0 0 0 black");
+        $("#DJ2").removeClass('flash');
         gameState[row][column] = 'o';
         var player2 = $('<div>').addClass('playerO');
         $(this).append(player2);
         $(this).fadeOut(100).fadeIn(100).fadeOut(100).fadeIn(100);
         whos_turn = 'x';
         $(".Player_turn").text('A.K.A. ' + player1_name);
-        $("#DJ1").css("box-shadow", "0 0 30px 5px white");
+        // old effect: css box shadow 0 0 30px 5px white
+        $("#DJ1").addClass('flash');
         $('.cover_box').fadeIn(2000);
         if (!checkWin(row, column, randomWin, 'o')) {
             ajaX();
