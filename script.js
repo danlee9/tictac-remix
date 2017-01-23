@@ -155,7 +155,7 @@ function closeButton() {
         else {
             randomWin = Math.floor(Math.random() * 17) + 3;
         }
-        $('#toWin').append(randomWin + " need to win.")
+        $('#toWin').append("Need " + randomWin + " in a row to win.");
     });
     $(".button_option").click(function () {
         var answer2 = $(this).text();
