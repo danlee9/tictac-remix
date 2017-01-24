@@ -182,6 +182,25 @@ body {
     font-size: 22px;
 }
 
+::-moz-placeholder { /* Firefox 19+ */
+    color: orangered;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 22px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: orangered;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 22px;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: orangered;
+    text-decoration: underline;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
 .input_name {
     padding: 0;
     padding-top: 115px;
